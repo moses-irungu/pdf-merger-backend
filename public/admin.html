@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PDF Merge Pro Admin</title>
+
+<link rel="stylesheet" href="admin.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <h1 class="admin-title">
+        📊 PDF Merge Pro Dashboard
+    </h1>
+
+    <div class="top-bar">
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+        <button id="exportBtn">
+            📥 Export CSV
+        </button>
+
+    </div>
+
+    <!-- STATS -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3>Total Merges</h3>
+
+            <div
+                id="totalMerges"
+                class="stat-number">
+                0
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Today's Merges</h3>
+
+            <div
+                id="todayMerges"
+                class="stat-number">
+                0
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Total PDFs</h3>
+
+            <div
+                id="totalPdfs"
+                class="stat-number">
+                0
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Countries</h3>
+
+            <div
+                id="countryCount"
+                class="stat-number">
+                0
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Browsers</h3>
+
+            <div
+                id="browserCount"
+                class="stat-number">
+                0
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Most Active Day</h3>
+
+            <div
+                id="activeDay"
+                class="stat-number">
+                -
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RECENT ACTIVITY -->
+
+    <div class="table-box">
+
+        <h2>
+            📋 Recent Activity
+        </h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Country</th>
+
+                        <th>Browser</th>
+
+                        <th>PDF Count</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="activityTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- TOP COUNTRIES -->
+
+    <div class="table-box">
+
+        <h2>
+            🏆 Top Countries
+        </h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Country</th>
+
+                        <th>Merges</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="topCountries">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- COUNTRY CHART -->
+
+    <div class="chart-box">
+
+        <h2>
+            🌍 Country Usage
+        </h2>
+
+        <div class="chart-wrapper">
+
+            <canvas id="countryChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- BROWSER CHART -->
+
+    <div class="chart-box">
+
+        <h2>
+            🌐 Browser Usage
+        </h2>
+
+        <div class="chart-wrapper">
+
+            <canvas id="browserChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- DAILY TREND -->
+
+    <div class="chart-box">
+
+        <h2>
+            📈 Daily Merge Trends
+        </h2>
+
+        <div class="chart-wrapper">
+
+            <canvas id="trendChart"></canvas>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>

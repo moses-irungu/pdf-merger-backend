@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+    min-height:100vh;
+    padding:30px;
+}
+
+.admin-container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.admin-title{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.top-bar{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+#logoutBtn{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.stat-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.stat-card h3{
+    margin-bottom:10px;
+}
+
+.stat-number{
+    font-size:45px;
+    color:#7c3aed;
+    font-weight:bold;
+}
+
+.table-box{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+th{
+    background:#7c3aed;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+tr:nth-child(even){
+    background:#f9fafb;
+}
+
+tr:hover{
+    background:#eef2ff;
+}
+
+.chart-box{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.chart-wrapper{
+    height:400px;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .admin-title{
+        font-size:30px;
+    }
+
+    .stat-number{
+        font-size:35px;
+    }
+
+    th,
+    td{
+        font-size:13px;
+        padding:10px;
+    }
+}
