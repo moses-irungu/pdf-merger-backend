@@ -390,13 +390,13 @@ mergeBtn.addEventListener(
             }, 1500);
 
             const response =
-                await fetch(
-                    "/merge",
-                    {
-                        method: "POST",
-                        body: formData
-                    }
-                );
+    await fetch(
+        "https://pdf-merger-backend-yoyd.onrender.com/merge",
+        {
+            method: "POST",
+            body: formData
+        }
+    );
 
             if (!response.ok) {
 
