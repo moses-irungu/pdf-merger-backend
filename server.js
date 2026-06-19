@@ -32,10 +32,14 @@ app.post("/merge", upload.array("pdfs"), async (req, res) => {
             await merger.add(file.path);
         }
 
-        const outputFile =
-            `merged/${uuidv4()}.pdf`;
+        if (!fs.existsSync("merged")) {
+    fs.mkdirSync("merged");
+}
 
-        await merger.save(outputFile);
+const outputFile =
+    `merged/${uuidv4()}.pdf`;
+
+await merger.save(outputFile);
 
         res.download(outputFile, "merged.pdf", () => {
 
