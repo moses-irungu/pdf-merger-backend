@@ -4,8 +4,17 @@ const PDFMerger = require("pdf-merger-js").default;
 const path = require("path");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
+
+app.use(
+    cors({
+        origin:
+        "https://pdf-merge-pro-62f22.web.app"
+    })
+);
 
 app.use(express.static("public"));
 
